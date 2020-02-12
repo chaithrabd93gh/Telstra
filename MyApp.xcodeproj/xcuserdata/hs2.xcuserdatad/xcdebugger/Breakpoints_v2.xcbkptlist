@@ -10,7 +10,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MyApp/Manager/DataManager.swift"
-            timestampString = "603119300.463591"
+            timestampString = "603178919.85452"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "26"
@@ -26,7 +26,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MyApp/Manager/DataManager.swift"
-            timestampString = "603119300.463659"
+            timestampString = "603178919.85541"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "23"
@@ -42,12 +42,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MyApp/View/ViewController.swift"
-            timestampString = "603119300.463711"
+            timestampString = "603180054.548719"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "52"
-            endingLineNumber = "52"
-            landmarkName = "didUpdate()"
+            startingLineNumber = "49"
+            endingLineNumber = "49"
+            landmarkName = "loadData()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -57,13 +57,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "MyApp/View/ViewController.swift"
-            timestampString = "603119300.464108"
+            filePath = "MyApp/Cell/TableViewCell.swift"
+            timestampString = "603181318.885299"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "38"
-            endingLineNumber = "38"
-            landmarkName = "loadData()"
+            startingLineNumber = "82"
+            endingLineNumber = "82"
+            landmarkName = "setImage(with:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

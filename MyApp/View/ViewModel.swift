@@ -17,6 +17,15 @@ class ViewModel {
     
     // MARK: - Closures for callback
     var didUpdate:(() -> Void)?
+    
+    //MARK: - Table related methods
+    func numberOfRows(in section: Int) -> Int {
+        return countries?.rows?.count ?? 0
+    }
+    
+    func cellData(for indexPath: IndexPath) -> Country {
+        return countries?.rows?[indexPath.row] ?? Country()
+    }
 }
 
 extension ViewModel {
