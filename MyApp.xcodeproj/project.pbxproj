@@ -118,13 +118,13 @@
 		359BF15423F2B5FB007AB5E9 /* MyApp */ = {
 			isa = PBXGroup;
 			children = (
-				359BF19123F2DE93007AB5E9 /* Cell */,
-				359BF18E23F2C626007AB5E9 /* Model */,
-				359BF18B23F2C1EB007AB5E9 /* Manager */,
 				359BF18523F2B68F007AB5E9 /* Application */,
-				359BF18323F2B68F007AB5E9 /* View */,
 				359BF15C23F2B5FE007AB5E9 /* Assets.xcassets */,
+				359BF19123F2DE93007AB5E9 /* Cell */,
 				359BF16123F2B5FE007AB5E9 /* Info.plist */,
+				359BF18B23F2C1EB007AB5E9 /* Manager */,
+				359BF18E23F2C626007AB5E9 /* Model */,
+				359BF18323F2B68F007AB5E9 /* View */,
 			);
 			path = MyApp;
 			sourceTree = "<group>";

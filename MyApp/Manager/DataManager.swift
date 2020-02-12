@@ -17,14 +17,16 @@ class DataManager {
     
     private init() {}
     
-    func getData(completion: @escaping (Countries)->()) {
+    func getData(completion: @escaping (Countries?, String?)->()) {
         let request = URLRequest(url: URL(string: url)!)
         let task = session.dataTask(with: request, completionHandler: { data, response, error -> Void in
             do {
                 if let data = data {
                     var jsonData = try JSONDecoder().decode(Countries.self, from: data)
                     jsonData.rows = jsonData.rows?.filter({$0.title != nil })
-                    completion(jsonData)
+                    completion(jsonData, nil)
+                } else if (error != nil) {
+                    completion(nil, error?.localizedDescription)
                 }
             } catch {
                 print("error")

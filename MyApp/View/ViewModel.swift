@@ -15,6 +15,7 @@ class ViewModel {
         }
     }
     
+    var error: String?
     // MARK: - Closures for callback
     var didUpdate:(() -> Void)?
     
@@ -30,7 +31,12 @@ class ViewModel {
 
 extension ViewModel {
     func loadData() {
-        DataManager.shared.getData { (countires) in
-            self.countries = countires
-        }    }
+        DataManager.shared.getData { (countires,error)  in
+            if let countris = countires {
+                self.countries = countris
+            } else if let err = error {
+                self.error = err
+            }
+        }
+    }
 }
