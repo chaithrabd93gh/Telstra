@@ -20,7 +20,6 @@ class DataManager {
     func getData(completion: @escaping (Countries)->()) {
         let request = URLRequest(url: URL(string: url)!)
         let task = session.dataTask(with: request, completionHandler: { data, response, error -> Void in
-            print(response!)
             do {
                 if let data = data {
                     var jsonData = try JSONDecoder().decode(Countries.self, from: data)

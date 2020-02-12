@@ -13,6 +13,7 @@ class ViewController: UIViewController {
     let reuseIdentifier = "reuseId"
     lazy private var tableView = UITableView()
     lazy private var activityIndicator = UIActivityIndicatorView()
+    lazy private var refreshControl = UIRefreshControl()
     
     let viewModel = ViewModel()
     
@@ -24,9 +25,11 @@ class ViewController: UIViewController {
         loadData()
     }
     
+    // MARK:- Set up UI
     func setUI() {
         view.backgroundColor = .white
         setTableview()
+        setRefreshControl()
     }
     
     func setTableview() {
@@ -36,6 +39,8 @@ class ViewController: UIViewController {
         tableView.delegate = self
         tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = UITableView.automaticDimension
+        tableView.tableFooterView = UIView()
+        tableView.addSubview(refreshControl)
         tableView.register(TableViewCell.self, forCellReuseIdentifier: reuseIdentifier)
         
         tableView.translatesAutoresizingMaskIntoConstraints = false
@@ -43,6 +48,14 @@ class ViewController: UIViewController {
         tableView.topAnchor.constraint(equalTo: view.topAnchor, constant: 0).isActive = true
         tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 0).isActive = true
         tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 0).isActive = true
+    }
+    
+    func setRefreshControl() {
+        refreshControl.attributedTitle = NSAttributedString.init(string: "Refreshing")
+        refreshControl.addTarget(self, action:
+            #selector(ViewController.refresh(_:)),
+                                 for: UIControl.Event.valueChanged)
+        refreshControl.tintColor = UIColor.gray
     }
     
     func loadData() {
@@ -60,6 +73,12 @@ class ViewController: UIViewController {
             self.activityIndicator.stopAnimating()
             self.tableView.reloadData()
         }
+    }
+    
+    //MARK: - IBAction
+   @objc func refresh(_ refreshControl: UIRefreshControl) {
+        refreshControl.endRefreshing()
+        loadData()
     }
 }
 
