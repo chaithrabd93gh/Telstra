@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewModel {
+class CountriesViewModel {
     var countries: Countries? {
         didSet {
             self.didUpdate?()
@@ -29,7 +29,7 @@ class ViewModel {
     }
 }
 
-extension ViewModel {
+extension CountriesViewModel {
     func loadData() {
         DataManager.shared.getData { (countires,error)  in
             if let countris = countires {

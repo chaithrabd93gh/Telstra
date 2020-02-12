@@ -9,7 +9,7 @@
 import UIKit
 import Kingfisher
 
-class TableViewCell: UITableViewCell {
+class CountryTableViewCell: UITableViewCell {
     
     let padding: CGFloat = 10
     lazy var imageview = UIImageView()

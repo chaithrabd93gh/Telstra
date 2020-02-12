@@ -8,14 +8,14 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ContriesVC: UIViewController {
     
     let reuseIdentifier = "reuseId"
     lazy private var tableView = UITableView()
     lazy private var activityIndicator = UIActivityIndicatorView()
     lazy private var refreshControl = UIRefreshControl()
     
-    let viewModel = ViewModel()
+    let viewModel = CountriesViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,7 +41,7 @@ class ViewController: UIViewController {
         tableView.estimatedRowHeight = UITableView.automaticDimension
         tableView.tableFooterView = UIView()
         tableView.addSubview(refreshControl)
-        tableView.register(TableViewCell.self, forCellReuseIdentifier: reuseIdentifier)
+        tableView.register(CountryTableViewCell.self, forCellReuseIdentifier: reuseIdentifier)
         
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 0).isActive = true
@@ -53,7 +53,7 @@ class ViewController: UIViewController {
     func setRefreshControl() {
         refreshControl.attributedTitle = NSAttributedString.init(string: "Refreshing")
         refreshControl.addTarget(self, action:
-            #selector(ViewController.refresh(_:)),
+            #selector(ContriesVC.refresh(_:)),
                                  for: UIControl.Event.valueChanged)
         refreshControl.tintColor = UIColor.gray
     }
@@ -82,22 +82,22 @@ class ViewController: UIViewController {
     }
 }
 
-extension ViewController: UITableViewDataSource {
+extension ContriesVC: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return viewModel.numberOfRows(in: section)
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: self.reuseIdentifier) as? TableViewCell else { return UITableViewCell() }
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: self.reuseIdentifier) as? CountryTableViewCell else { return UITableViewCell() }
         cell.selectionStyle = .none
         cell.setCountryData(viewModel.cellData(for: indexPath))
         return cell
     }
 }
 
-extension ViewController: UITableViewDelegate {
+extension ContriesVC: UITableViewDelegate {
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        if let cell = cell as? TableViewCell {
+        if let cell = cell as? CountryTableViewCell {
             let data = viewModel.cellData(for: indexPath)
             cell.setImage(with: data.imageHref)
         }

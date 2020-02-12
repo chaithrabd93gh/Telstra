@@ -11,12 +11,12 @@
 		359BF15D23F2B5FE007AB5E9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 359BF15C23F2B5FE007AB5E9 /* Assets.xcassets */; };
 		359BF16B23F2B5FE007AB5E9 /* MyAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359BF16A23F2B5FE007AB5E9 /* MyAppTests.swift */; };
 		359BF17623F2B5FE007AB5E9 /* MyAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359BF17523F2B5FE007AB5E9 /* MyAppUITests.swift */; };
-		359BF18723F2B68F007AB5E9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359BF18423F2B68F007AB5E9 /* ViewController.swift */; };
+		359BF18723F2B68F007AB5E9 /* ContriesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359BF18423F2B68F007AB5E9 /* ContriesVC.swift */; };
 		359BF18823F2B68F007AB5E9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359BF18623F2B68F007AB5E9 /* AppDelegate.swift */; };
-		359BF18A23F2BF3B007AB5E9 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359BF18923F2BF3B007AB5E9 /* ViewModel.swift */; };
+		359BF18A23F2BF3B007AB5E9 /* CountriesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359BF18923F2BF3B007AB5E9 /* CountriesViewModel.swift */; };
 		359BF18D23F2C204007AB5E9 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359BF18C23F2C204007AB5E9 /* DataManager.swift */; };
 		359BF19023F2C651007AB5E9 /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359BF18F23F2C651007AB5E9 /* Country.swift */; };
-		359BF19323F3B331007AB5E9 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359BF19223F3B331007AB5E9 /* TableViewCell.swift */; };
+		359BF19323F3B331007AB5E9 /* CountryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359BF19223F3B331007AB5E9 /* CountryTableViewCell.swift */; };
 		85B8A635B030DB711E0B1EAE /* Pods_MyApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27511C56C269773D29EA85AC /* Pods_MyApp.framework */; };
 		AE32F326A37B604993F7F3C2 /* Pods_MyAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8F02F907AE418BD8641E542 /* Pods_MyAppTests.framework */; };
 /* End PBXBuildFile section */
@@ -53,12 +53,12 @@
 		359BF17123F2B5FE007AB5E9 /* MyAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		359BF17523F2B5FE007AB5E9 /* MyAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAppUITests.swift; sourceTree = "<group>"; };
 		359BF17723F2B5FE007AB5E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		359BF18423F2B68F007AB5E9 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		359BF18423F2B68F007AB5E9 /* ContriesVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContriesVC.swift; sourceTree = "<group>"; };
 		359BF18623F2B68F007AB5E9 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		359BF18923F2BF3B007AB5E9 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		359BF18923F2BF3B007AB5E9 /* CountriesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesViewModel.swift; sourceTree = "<group>"; };
 		359BF18C23F2C204007AB5E9 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		359BF18F23F2C651007AB5E9 /* Country.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
-		359BF19223F3B331007AB5E9 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		359BF19223F3B331007AB5E9 /* CountryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryTableViewCell.swift; sourceTree = "<group>"; };
 		67A2FA54A1B68E623088F47F /* Pods-MyAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyAppTests.release.xcconfig"; path = "Target Support Files/Pods-MyAppTests/Pods-MyAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		A2CD9BCC38DE24C7DBE2984C /* Pods_MyAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8F02F907AE418BD8641E542 /* Pods_MyAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -150,8 +150,8 @@
 		359BF18323F2B68F007AB5E9 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				359BF18423F2B68F007AB5E9 /* ViewController.swift */,
-				359BF18923F2BF3B007AB5E9 /* ViewModel.swift */,
+				359BF18423F2B68F007AB5E9 /* ContriesVC.swift */,
+				359BF18923F2BF3B007AB5E9 /* CountriesViewModel.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -183,7 +183,7 @@
 		359BF19123F2DE93007AB5E9 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
-				359BF19223F3B331007AB5E9 /* TableViewCell.swift */,
+				359BF19223F3B331007AB5E9 /* CountryTableViewCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -437,10 +437,10 @@
 			files = (
 				359BF18823F2B68F007AB5E9 /* AppDelegate.swift in Sources */,
 				359BF18D23F2C204007AB5E9 /* DataManager.swift in Sources */,
-				359BF18A23F2BF3B007AB5E9 /* ViewModel.swift in Sources */,
-				359BF19323F3B331007AB5E9 /* TableViewCell.swift in Sources */,
+				359BF18A23F2BF3B007AB5E9 /* CountriesViewModel.swift in Sources */,
+				359BF19323F3B331007AB5E9 /* CountryTableViewCell.swift in Sources */,
 				359BF19023F2C651007AB5E9 /* Country.swift in Sources */,
-				359BF18723F2B68F007AB5E9 /* ViewController.swift in Sources */,
+				359BF18723F2B68F007AB5E9 /* ContriesVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
