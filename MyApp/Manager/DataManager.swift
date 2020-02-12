@@ -8,7 +8,7 @@
 
 import UIKit
 
-let url = "https://api.myjson.com/bins/13a1zo"
+let url = "https://api.myjson.com/bins/ao19k"
 
 let session = URLSession.shared
 
@@ -23,8 +23,9 @@ class DataManager {
             print(response!)
             do {
                 if let data = data {
-                let jsonData = try JSONDecoder().decode(Countries.self, from: data)
-                completion(jsonData)
+                    var jsonData = try JSONDecoder().decode(Countries.self, from: data)
+                    jsonData.rows = jsonData.rows?.filter({$0.title != nil })
+                    completion(jsonData)
                 }
             } catch {
                 print("error")

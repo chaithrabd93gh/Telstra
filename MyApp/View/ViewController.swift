@@ -70,6 +70,7 @@ extension ViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: self.reuseIdentifier) as? TableViewCell else { return UITableViewCell() }
+        cell.selectionStyle = .none
         cell.setCountryData(viewModel.cellData(for: indexPath))
         return cell
     }

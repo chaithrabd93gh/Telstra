@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class TableViewCell: UITableViewCell {
     
@@ -26,9 +27,14 @@ class TableViewCell: UITableViewCell {
         setUI()
     }
     
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        imageview.image = UIImage.init(named: "placeholder")
+    }
+    
     //MARK: - Setup of UI
     func setUI() {
-         self.heightAnchor.constraint(greaterThanOrEqualToConstant: (100+(2*padding))).isActive = true
+         self.heightAnchor.constraint(greaterThanOrEqualToConstant: 140).isActive = true
         
         setImage()
         setTitleLabel()
@@ -79,6 +85,8 @@ class TableViewCell: UITableViewCell {
     }
     
     func setImage(with url: String?) {
-        
+        if let url = url {
+             imageview.kf.setImage(with: URL.init(string: url))
+        }
     }
 }
